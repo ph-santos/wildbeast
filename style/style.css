@@ -13,27 +13,27 @@ ul {
 }
 
 img {
+    display: block;
     max-width: 100%;
+    border-radius: 5px;
 }
 
 /* Grid Geral */
 .structure {
     display: grid;
-    grid: 
-        "header header header"
-        "sidenav content anuncios"
-        "footer footer footer"
-        / minmax(160px, 1fr) 3fr 300px
-    ;
-
-    
-    /* grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
     grid-template-areas: 
     "header header header"
     "sidenav content anuncios"
     "footer footer footer"
-    ;  */
-   
+    ;
+     
+   /* grid: 
+        "header header header"
+        "sidenav content anuncios"
+        "footer footer footer"
+        / minmax(160px, 1fr) 3fr 300px
+    ; */
 }
 
 /* Header */
@@ -41,12 +41,13 @@ img {
     grid-area: header;
     background: linear-gradient(135deg, #8844ee, #B07DFB);
     padding: 30px;
+   
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
 }
 
-.logo {
+.header .logo {
     max-width: 200px;
 }
 
@@ -62,9 +63,11 @@ img {
 .header nav ul a {
     display: block;
     padding: 10px;
+    
     color: white;
     font-size: 1.24em;
     text-decoration: none;
+    
     background: rgb(0, 0, 0, .1);
     border-radius: 5px;
     transition: .2s;
@@ -74,18 +77,55 @@ img {
     background: rgb(0, 0, 0, .5);
 }
 
+
+/* Sidenav */
 .sidenav {
     grid-area: sidenav;
+    background: #FAFBFC;
+    padding: 30px;
 }
 
-.content {
-    grid-area: content;
+.sidenav ul li  a {
+    display: block;
+    
+    max-width: 100px;
+    min-width:60px;
+    
+    margin: 0 auto 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, .15);
+    transition: background .2s ease-in-out;
 }
 
+.sidenav ul li a:hover {
+    background: #B07DFB;
+}
+
+
+/* Content */
+
+
+
+/* Anuncios */
 .anuncios {
     grid-area: anuncios;
+    display: grid;
+    align-content: start;
+    gap: 30px;
+    
+    padding: 30px;
+    background: #FAFBFC;
 }
 
+
+/* Footer */
 .footer {
     grid-area: footer;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
 }
