@@ -1,6 +1,8 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
 
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +19,7 @@ img {
     max-width: 100%;
     border-radius: 5px;
 }
+
 
 /* Grid Geral */
 .structure {
@@ -35,6 +38,7 @@ img {
         / minmax(160px, 1fr) 3fr 300px
     ; */
 }
+
 
 /* Header */
 .header {
@@ -88,7 +92,7 @@ img {
 .sidenav ul li  a {
     display: block;
     
-    max-width: 100px;
+    max-width: 140px;
     min-width:60px;
     
     margin: 0 auto 30px;
@@ -105,7 +109,100 @@ img {
 
 
 /* Content */
+.content {
+    max-width: 900px;
+    padding: 30px;
+    margin: auto;
 
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+}
+
+.content .title {
+    color: #B07DFB;
+}
+
+.content .caracteristicas {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content h1 {
+    font-size: 3.75em;
+    line-height: 1;
+}
+
+.content span {
+    font-style: italic;
+    font-size: 0.875em;
+}
+
+
+
+.content .caracteristicas div {
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+}
+
+.content .caracteristicas div:first-child {
+    margin-right: 30px;
+}
+
+.content .caracteristicas span {    
+    color: #B07DFB;
+    font-style: normal;
+}
+
+.content .caracteristicas div .numero {
+    font-size: 3em;
+    margin: 10px auto;
+}
+
+.content .caracteristicas div .rotulo {
+    display: block;
+    background: white;
+    border-radius: 0 0 5px 5px;
+    padding: 5px 0;
+    
+    font-size: 1em;
+    
+    position: relative;
+    top: 2px;
+}
+
+
+
+.content p {
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+}
+
+.content .informacoes p + P{
+    margin-top: 30px;
+}
+
+
+
+.content .col-wide {
+    grid-column: 1 / -1
+}
+
+.content .imagem-1 {
+    grid-row: 3 / span 2;
+    align-self: end;
+}
+
+.content .imagem-2 {
+    align-self: end;
+}
 
 
 /* Anuncios */
