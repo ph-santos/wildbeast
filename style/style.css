@@ -189,6 +189,12 @@ img {
     margin-top: 30px;
 }
 
+.content .destaque {
+    max-width: 16em;
+    color: #B07DFB;
+    font-size: 0.875em;
+}
+
 
 
 .content .col-wide {
@@ -202,6 +208,38 @@ img {
 
 .content .imagem-2 {
     align-self: end;
+}
+
+
+
+.citacao, .atributos {
+    align-self: start;
+    padding: 30px;
+    background: linear-gradient(135deg, #8844EE, #B07DFB);
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+}
+
+.citacao p {
+    max-width: 500px;
+    margin: auto;
+
+    color: white;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+}
+
+.atributos li {
+    padding: 15px;
+
+    color: white;
+    font-size: 1.125em;
+    font-family: Courier, monospace;
+}
+
+.atributos li + li {
+    border-top: 1px solid #B07DFB;
 }
 
 
