@@ -1,6 +1,6 @@
 @media screen and (max-width: 760px) {
     div.structure {
-        grid-template-columns: 100%;
+        grid-template-columns: 1fr;
         grid-template-areas: 
             "header"
             "sidenav"
@@ -9,6 +9,8 @@
             "footer"
         ;
     }
+
+
 
     .header {
         grid-template-columns: auto;
@@ -25,6 +27,47 @@
 
     .header nav ul li a {
         font-size: 1em;
+    }
+
+
+
+    .sidenav {
+        position: relative;
+        padding: 0 30px;
+        overflow-x: auto; /* O overflow indica o que estoura o container é o auto indica para colocar uma barra de rolagem */
+    }
+
+    .sidenav::before {
+        content: '→';
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, .3);
+        animation: arrow .5s ease-in 0s infinite alternate;
+    }
+
+    @keyframes arrow {
+        from {
+            right: 30px;
+        }
+
+        to {
+            right: 20px;
+        }
+    }
+
+
+    .sidenav ul {
+        display: flex;
+    }
+
+    .sidenav ul li {
+        flex: 1 0 60px;
+    }
+
+    .sidenav ul li a {
+        width: 100px;
+        margin: 30px 30px 30px 0;
     }
 }
 
